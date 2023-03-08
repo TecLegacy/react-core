@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import AxiosFetch from "./components/axios library";
+import AxiosFetch from "@/components/axios library";
+import Navbar from "@/components/header/NavBar";
 
 const App: React.FC = () => {
   //  RouterDefinition
@@ -7,6 +8,7 @@ const App: React.FC = () => {
     {
       path: "/",
       element: <AxiosFetch />,
+      // element: <Navbar />,
     },
   ];
   // Router
