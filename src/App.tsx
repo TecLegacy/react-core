@@ -1,14 +1,18 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AxiosFetch from "./components/axios library";
+
 const App: React.FC = () => {
-  return (
-    <>
-      <div>
-        <h1>Vite Configuration with yarn</h1>
-      </div>
-      <h1 className=" mt-32 bg-red-500 py-20 text-lg  text-black  ">
-        Hot Replacement
-      </h1>
-    </>
-  );
+  //  RouterDefinition
+  const routerDefinition = [
+    {
+      path: "/",
+      element: <AxiosFetch />,
+    },
+  ];
+  // Router
+  const Router = createBrowserRouter(routerDefinition);
+
+  return <RouterProvider router={Router} />;
 };
 
 export default App;

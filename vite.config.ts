@@ -12,6 +12,7 @@ export default defineConfig({
       },
     ],
   },
+  // Hot module Replacement - Auto reload fix WSL
   server: {
     watch: {
       usePolling: true,
